@@ -1,4 +1,4 @@
-const API_BASE_URL ="https://movie-recommendation-backend-mc30.onrender.com"
+const API_BASE_URL ="https://movie-recommendation-backend-mc30.onrender.com";
 
 const searchInput = document.getElementById("int");
 const searchButton = document.getElementById("btn");
