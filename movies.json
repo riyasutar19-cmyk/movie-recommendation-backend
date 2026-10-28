@@ -1,0 +1,50 @@
+[
+    {
+        "name": "avatar",
+        "rating": 8.0,
+        "genre": "Action",
+        "year": 2009,
+        "Image": "image/avatar.png",
+        "trailer": "image/Avatar_2009_trailer.mp4"
+    },
+    {
+        "name": "inception",
+        "rating": 8.8,
+        "genre": "Sci-Fi",
+        "year": 2015,
+        "Image": "image/incep.png",
+        "trailer": "image/INCEPTION trailer.mp4"
+    },
+    {
+        "name": "titanic",
+        "rating": 7.9,
+        "genre": "Romance",
+        "year": 1997,
+        "Image": "image/titanic.png",
+        "trailer": "image/titanic_1997_trailer.mp4"
+    },
+    {
+        "name": "interstellar",
+        "rating": 8.7,
+        "genre": "Sci-Fi",
+        "year": 2014,
+        "Image": "image/interstellar.png",
+        "trailer": "image/interstellar_trailer.mp4"
+    },
+    {
+        "name": "joker",
+        "rating": 8.3,
+        "genre": "Action",
+        "year": 2019,
+        "Image": "image/joker.png",
+        "trailer": "image/joker_trailer.mp4"
+    },
+    {
+        "name": "the notebook",
+        "rating": 7.8,
+        "genre": "Romance",
+        "year": 2004,
+        "Image": "image/notebook.png",
+        "trailer": "image/notebook_trailer.mp4"
+    }
+]
