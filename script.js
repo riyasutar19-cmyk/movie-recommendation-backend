@@ -975,7 +975,7 @@ const data = await response.json();
                 </div>
             </div>
         `;
-    }
+    }}
 
 
 
@@ -1057,4 +1057,4 @@ document.addEventListener("click", function (event) {
         }
     }
 })
-}
+
