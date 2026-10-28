@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://movie-recommendation-backend-mc30.onrender.com";
+const API_BASE_URL ="https://movie-recommendation-backend-mc30.onrender.com"
 
 const searchInput = document.getElementById("int");
 const searchButton = document.getElementById("btn");
@@ -233,7 +233,7 @@ async function searchTMDB(query, page = 1) {
 
     try {
         const response = await fetch(
-    `${API_BASE_URL}/search?query=${encodeURIComponent(query)}&page=${page}`
+    `${API_BASE_URL}/api/search?query=${encodeURIComponent(query)}&page=${page}`
 );
 
         console.log("TMDB response status:", response.status);
@@ -363,10 +363,9 @@ setTimeout(() => {
 }, 100);
 
     try {
-        const response = await fetch(
-            `${API_BASE_URL}/movie/${movieId}`,
-            { headers: tmdbHeaders }
-        );
+       const response = await fetch(
+    `${API_BASE_URL}/api/movie/${movieId}`
+);
 
         if (!response.ok) {
             throw new Error(`TMDB request failed: ${response.status}`);
@@ -460,7 +459,7 @@ async function showTrendingTrailer(movieId, movieTitle) {
 
     try {
         const response = await fetch(
-    `${API_BASE_URL}/movie/${movieId}/videos`
+    `${API_BASE_URL}/api/movie/${movieId}/videos`
 );
 
         if (!response.ok) {
@@ -552,7 +551,7 @@ async function loadTrendingMovies() {
     trendingMovies.innerHTML = "<p>Loading trending movies...</p>";
 
     try {
-    const response = await fetch(`${API_BASE_URL}/trending`);
+    const response = await fetch(`${API_BASE_URL}/api/trending`);
 
     if (!response.ok) {
         const errorText = await response.text();
@@ -565,9 +564,7 @@ async function loadTrendingMovies() {
         );
     }
 
-        if (!response.ok) {
-            throw new Error(`TMDB request failed: ${response.status}`);
-        }
+    
 
         const data = await response.json();
 
@@ -801,7 +798,7 @@ async function loadFeaturedCarousel() {
     if (!carouselInner || !indicators) return;
 
     try {
-        const response = await fetch(`${API_BASE_URL}/trending`);
+    const response = await fetch(`${API_BASE_URL}/api/trending`);
 
 if (!response.ok) {
     throw new Error(`Backend error: ${response.status}`);
@@ -979,7 +976,7 @@ const data = await response.json();
             </div>
         `;
     }
-}
+
 
 
 // Update the featured favorite button after it is clicked.
@@ -1059,4 +1056,5 @@ document.addEventListener("click", function (event) {
             trailerBox.innerHTML = "";
         }
     }
-});
+})
+}
